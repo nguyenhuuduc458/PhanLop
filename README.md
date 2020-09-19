@@ -24,7 +24,7 @@
 ### Git Flow
 - Step 1: Checkout developer branch: `git checkout develop`
 - Step 2: Create your feature branch: `git checkout -b feature/{feature_name}`
-- Step 3: After you finish your task checkout to develop and merge your feature branch option --no-ff when you wantto keep history of branch : `git merge {branch_name}`
+- Step 3: After you finish your task checkout to develop and merge your feature branch option --no-ff when you want to keep history of branch : `git merge --no--ff {branch_name}`
 - Step 4: Remove your old branch: `git branch -d {branch_name}`
 - Step 5: Commit branch to git: `git commit -m "somthing"`
 - Step 5: Push branch: `git push origin develope`
