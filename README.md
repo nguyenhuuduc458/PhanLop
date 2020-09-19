@@ -4,7 +4,7 @@
 > The app includes some main functions such as booking a tour, choosing a place to visit, etc
 
 ### Prerequisites
-- Basic knowledge of <font color="green">`3-tier`</font>  architecture
+- Basic knowledge of <p style='color: red'>`3-tier`</p> architecture
 - Have a basic knowledge of the **C# programming language**
 - Familiar with **Visual Studio IDE**
 - Higher design with the **Bunifu library**
