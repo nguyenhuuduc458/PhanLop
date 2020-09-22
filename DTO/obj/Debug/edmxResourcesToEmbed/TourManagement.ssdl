@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TourManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="Birthday" Type="date" Nullable="false" />
+    <Property Name="PhoneNumber" Type="char" MaxLength="10" />
+    <Property Name="ICNumber" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="ExpenseId" />
+    </Key>
+    <Property Name="ExpenseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Value" Type="float" Nullable="false" />
+    <Property Name="ExpenseTypeId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GITId" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExpenseType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExpenseTypeId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ExpenseTypeName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GITDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GITId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GroupInclusiveTour">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GITId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GITName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TourId" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LocationId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LocationName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TourId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TourName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TourFeature" Type="nvarchar" MaxLength="50" />
+    <Property Name="TourDep" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TourDes" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="TourTypeId" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TourDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TourId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LocationId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrderNumber" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TourGuide">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TourGuideId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Birthday" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TourGuideWithGIT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TourGuideId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GITId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Duty" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TourPrice">
+    <Key>
+      <PropertyRef Name="TourPriceId" />
+    </Key>
+    <Property Name="TourPriceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="TourId" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TourType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TourTypeId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TourTypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_Expense_ExpenseType' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_Expense_ExpenseType" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_Expense_GIT' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_Expense_GIT" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_GIT_Tour' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_GIT_Tour" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_GITDetail_Customer' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_GITDetail_Customer" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_GITDetail_GITId' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_GITDetail_GITId" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_Tour_TourType' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_Tour_TourType" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_TourDetail_Location' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_TourDetail_Location" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_TourDetail_Tour' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_TourDetail_Tour" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_TourGuideWithGIT_GIT' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_TourGuideWithGIT_GIT" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_TourGuideWithGIT_TourGuide' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_TourGuideWithGIT_TourGuide" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_TourPrice_Tour' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_TourPrice_Tour" />-->
+  <EntityContainer Name="TourManagementModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expense" EntityType="Self.Expense" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExpenseType" EntityType="Self.ExpenseType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GITDetail" EntityType="Self.GITDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupInclusiveTour" EntityType="Self.GroupInclusiveTour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tour" EntityType="Self.Tour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourDetail" EntityType="Self.TourDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourGuide" EntityType="Self.TourGuide" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourGuideWithGIT" EntityType="Self.TourGuideWithGIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourPrice" EntityType="Self.TourPrice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourType" EntityType="Self.TourType" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

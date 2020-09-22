@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TourManagementModelStoreContainer" CdmEntityContainer="TourManagementEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="TourManagementModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="ICNumber" ColumnName="ICNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="TourManagementModel.Expense">
+        <MappingFragment StoreEntitySet="Expense">
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ExpenseTypeId" ColumnName="ExpenseTypeId" />
+          <ScalarProperty Name="GITId" ColumnName="GITId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpenseTypes">
+      <EntityTypeMapping TypeName="TourManagementModel.ExpenseType">
+        <MappingFragment StoreEntitySet="ExpenseType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ExpenseTypeId" ColumnName="ExpenseTypeId" />
+          <ScalarProperty Name="ExpenseTypeName" ColumnName="ExpenseTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GITDetails">
+      <EntityTypeMapping TypeName="TourManagementModel.GITDetail">
+        <MappingFragment StoreEntitySet="GITDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="GITId" ColumnName="GITId" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupInclusiveTours">
+      <EntityTypeMapping TypeName="TourManagementModel.GroupInclusiveTour">
+        <MappingFragment StoreEntitySet="GroupInclusiveTour">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GITId" ColumnName="GITId" />
+          <ScalarProperty Name="GITName" ColumnName="GITName" />
+          <ScalarProperty Name="TourId" ColumnName="TourId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="TourManagementModel.Location">
+        <MappingFragment StoreEntitySet="Location">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tours">
+      <EntityTypeMapping TypeName="TourManagementModel.Tour">
+        <MappingFragment StoreEntitySet="Tour">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TourId" ColumnName="TourId" />
+          <ScalarProperty Name="TourName" ColumnName="TourName" />
+          <ScalarProperty Name="TourFeature" ColumnName="TourFeature" />
+          <ScalarProperty Name="TourDep" ColumnName="TourDep" />
+          <ScalarProperty Name="TourDes" ColumnName="TourDes" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="TourTypeId" ColumnName="TourTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourDetails">
+      <EntityTypeMapping TypeName="TourManagementModel.TourDetail">
+        <MappingFragment StoreEntitySet="TourDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TourId" ColumnName="TourId" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourGuides">
+      <EntityTypeMapping TypeName="TourManagementModel.TourGuide">
+        <MappingFragment StoreEntitySet="TourGuide">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TourGuideId" ColumnName="TourGuideId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourGuideWithGITs">
+      <EntityTypeMapping TypeName="TourManagementModel.TourGuideWithGIT">
+        <MappingFragment StoreEntitySet="TourGuideWithGIT">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TourGuideId" ColumnName="TourGuideId" />
+          <ScalarProperty Name="GITId" ColumnName="GITId" />
+          <ScalarProperty Name="Duty" ColumnName="Duty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourPrices">
+      <EntityTypeMapping TypeName="TourManagementModel.TourPrice">
+        <MappingFragment StoreEntitySet="TourPrice">
+          <ScalarProperty Name="TourPriceId" ColumnName="TourPriceId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="TourId" ColumnName="TourId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourTypes">
+      <EntityTypeMapping TypeName="TourManagementModel.TourType">
+        <MappingFragment StoreEntitySet="TourType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TourTypeId" ColumnName="TourTypeId" />
+          <ScalarProperty Name="TourTypeName" ColumnName="TourTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

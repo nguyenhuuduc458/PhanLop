@@ -1,0 +1,11 @@
+D:\HKII_4\BS_classification model\PhanLop\BUS\bin\Debug\BUS.dll
+D:\HKII_4\BS_classification model\PhanLop\BUS\bin\Debug\BUS.pdb
+D:\HKII_4\BS_classification model\PhanLop\BUS\bin\Debug\DAO.dll
+D:\HKII_4\BS_classification model\PhanLop\BUS\bin\Debug\DTO.dll
+D:\HKII_4\BS_classification model\PhanLop\BUS\bin\Debug\EntityFramework.dll
+D:\HKII_4\BS_classification model\PhanLop\BUS\bin\Debug\DAO.pdb
+D:\HKII_4\BS_classification model\PhanLop\BUS\bin\Debug\DTO.pdb
+D:\HKII_4\BS_classification model\PhanLop\BUS\bin\Debug\EntityFramework.xml
+D:\HKII_4\BS_classification model\PhanLop\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\HKII_4\BS_classification model\PhanLop\BUS\obj\Debug\BUS.dll
+D:\HKII_4\BS_classification model\PhanLop\BUS\obj\Debug\BUS.pdb

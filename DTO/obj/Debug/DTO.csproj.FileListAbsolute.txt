@@ -1,0 +1,10 @@
+D:\HKII_4\BS_classification model\PhanLop\DTO\bin\Debug\DTO.dll.config
+D:\HKII_4\BS_classification model\PhanLop\DTO\bin\Debug\DTO.dll
+D:\HKII_4\BS_classification model\PhanLop\DTO\bin\Debug\DTO.pdb
+D:\HKII_4\BS_classification model\PhanLop\DTO\bin\Debug\EntityFramework.dll
+D:\HKII_4\BS_classification model\PhanLop\DTO\bin\Debug\EntityFramework.SqlServer.dll
+D:\HKII_4\BS_classification model\PhanLop\DTO\bin\Debug\EntityFramework.xml
+D:\HKII_4\BS_classification model\PhanLop\DTO\bin\Debug\EntityFramework.SqlServer.xml
+D:\HKII_4\BS_classification model\PhanLop\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\HKII_4\BS_classification model\PhanLop\DTO\obj\Debug\DTO.dll
+D:\HKII_4\BS_classification model\PhanLop\DTO\obj\Debug\DTO.pdb

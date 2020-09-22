@@ -1,1 +1,5 @@
+D:\HKII_4\BS_classification model\PhanLop\PhanLop\obj\Debug\PhanLop.csprojResolveAssemblyReference.cache
+D:\HKII_4\BS_classification model\PhanLop\PhanLop\obj\Debug\PhanLop.CustomerUI.FormGUI.resources
+D:\HKII_4\BS_classification model\PhanLop\PhanLop\obj\Debug\PhanLop.Properties.Resources.resources
+D:\HKII_4\BS_classification model\PhanLop\PhanLop\obj\Debug\PhanLop.csproj.GenerateResource.Cache
 D:\HKII_4\BS_classification model\PhanLop\PhanLop\bin\Debug\PhanLop.exe.config
